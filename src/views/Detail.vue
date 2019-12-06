@@ -1,6 +1,6 @@
 <template>
   <div class="detail">
-    <Blog :item="getDetail" :key="getDetail.id" />
+    <Blog :item="getDetail" :key="getDetail.id" :detail="true" />
   </div>
 </template>
 
