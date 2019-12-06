@@ -12,11 +12,13 @@ const mutations = {
 };
 
 const getters = {
+  blogState: state => state,
   getBlogs: state => state.blogs,
 };
 
 const state = {
   blogs: '',
+  tacos: 'They are good',
 };
 
 export default {

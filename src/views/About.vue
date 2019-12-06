@@ -1,18 +1,17 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <List />
+    <BlogList />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import List from '@/components/List.vue';
+import BlogList from '@/components/BlogList.vue';
 
 export default {
   name: 'About',
   components: {
-    List,
+    BlogList,
   },
 };
 </script>

@@ -1,26 +1,43 @@
 <template>
   <div class="main">
-    <img :src="blog.picture" alt="test" />
+    <img :src="item.picture" alt="test" />
     <div class="juice">
-      <h3>{{ blog.body }}</h3>
-      <span>Created: {{ blog.created_at }}</span>
+      <h1>{{ item.title }}</h1>
+      <h6>
+        <i>{{ listToString(item.tags) }}</i>
+      </h6>
+      <p>{{ vanish(item.body) }}</p>
+      <span>Created: {{ item.created_at }}</span>
     </div>
   </div>
 </template>
 <script>
+import { listToString, vanish } from '../lib/helperfunctions';
+
 export default {
   name: 'Blog',
-  props: ['blog'],
+  props: ['item'],
+  methods: {
+    listToString,
+    vanish,
+  },
 };
 </script>
 
 <style scoped lang="stylus">
+h1
+  font-family 'Verdana, Geneva, Tahoma, sans-serif'
+  font-weight 200
+
+h6
+  color gray
+  font-weight 800
+
 .main
-//   border 1px solid black
-  margin 2px
+  margin 12rem
   display flex
   align-items center
 
 .juice
-    margin 10px
+    margin 25px
 </style>
