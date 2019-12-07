@@ -4,7 +4,7 @@
     <div class="juice">
       <h1 v-if="detail">{{ item.title }}</h1>
       <div v-else>
-        <router-link :to="'/blogs/' + item.id">
+        <router-link :to="'/' + item.id">
           <h1>{{ item.title }}</h1>
         </router-link>
       </div>
@@ -45,7 +45,10 @@ h6
   margin 12rem
   display flex
   align-items center
+  margin-top 2rem
 
 .juice
     margin 25px
+    height 500px
+    // margin-top 0px
 </style>

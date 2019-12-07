@@ -7,11 +7,8 @@ const actions = {
   fetchBlog({ commit }, id) {
     // eslint-disable-next-line global-require
     const jsonResponse = require('../../public/blogs.json');
-    console.log(jsonResponse);
-    console.log(id);
     // eslint-disable-next-line eqeqeq
     const data = jsonResponse.filter(i => i.id == id);
-    console.log(data);
     commit('GET_BLOG', data[0]);
   },
 };
