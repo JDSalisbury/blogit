@@ -4,7 +4,7 @@
     <div class="juice">
       <h1 v-if="detail">{{ item.title }}</h1>
       <div v-else>
-        <router-link :to="'/' + item.id">
+        <router-link @click.native="scrollToTop" :to="'/' + item.id">
           <h1>{{ item.title }}</h1>
         </router-link>
       </div>
@@ -28,6 +28,9 @@ export default {
   methods: {
     listToString,
     vanish,
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
