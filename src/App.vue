@@ -7,7 +7,7 @@
       </div>
       <img id="logo" alt="Vue logo" src="../src/assets/kiwi.svg" />
       <div>
-        <router-link to="/">Profile</router-link> |
+        <a href="https://jdsalisbury.netlify.com/" target="_blank">Profile</a> |
         <router-link to="/">Contact</router-link>
       </div>
     </div>

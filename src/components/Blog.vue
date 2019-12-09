@@ -8,10 +8,11 @@
           <h1>{{ item.title }}</h1>
         </router-link>
       </div>
-
-      <h6>
-        <i>{{ listToString(item.tags) }}</i>
-      </h6>
+      <div v-for="tag in item.tags" :key="tag.id">
+        <h6>
+          <i>{{ tag.name }}</i>
+        </h6>
+      </div>
 
       <p>{{ detail ? item.body : vanish(item.body) }}</p>
 
