@@ -9,9 +9,11 @@
         </router-link>
       </div>
       <div v-for="tag in item.tags" :key="tag.id">
-        <h6>
-          <i>{{ tag.name }}</i>
-        </h6>
+        <router-link @click.native="scrollToTop" :to="'/tag/' + tag.id">
+          <h6>
+            <i>{{ tag.name }}</i>
+          </h6>
+        </router-link>
       </div>
 
       <p>{{ detail ? item.body : vanish(item.body) }}</p>
@@ -37,22 +39,26 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-h1
-  font-family 'Verdana, Geneva, Tahoma, sans-serif'
-  font-weight 200
+h1 {
+  font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+  font-weight: 200;
+}
 
-h6
-  color gray
-  font-weight 800
+h6 {
+  color: gray;
+  font-weight: 800;
+}
 
-.main
-  margin 12rem
-  display flex
-  align-items center
-  margin-top 2rem
+.main {
+  margin: 12rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
 
-.juice
-    margin 25px
-    height 500px
-    // margin-top 0px
+.juice {
+  margin: 25px;
+  height: 500px;
+  // margin-top 0px
+}
 </style>

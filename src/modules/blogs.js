@@ -11,6 +11,14 @@ const actions = {
     const data = jsonResponse.filter(i => i.id == id);
     commit('GET_BLOG', data[0]);
   },
+  fetchBlogsByTags({ commit }, id) {
+    // eslint-disable-next-line global-require
+    const jsonResponse = require('../../public/blogs.json');
+    // eslint-disable-next-line eqeqeq
+    const data = jsonResponse.filter(i => i.tags.some(tag => tag.id === id));
+    console.log(data);
+    commit('GET_BLOGS_BY_TAG', data);
+  },
 };
 
 const mutations = {
@@ -18,6 +26,8 @@ const mutations = {
   BLOGS_SUCCESS: (state, data) => (state.blogs = data),
   // eslint-disable-next-line no-return-assign
   GET_BLOG: (state, data) => (state.detail = data),
+  // eslint-disable-next-line no-return-assign
+  GET_BLOGS_BY_TAG: (state, data) => (state.blogs = data),
 };
 
 const getters = {
@@ -30,6 +40,7 @@ const state = {
   blogs: '',
   tacos: 'They are good',
   detail: '',
+  tagfilter: '',
 };
 
 export default {

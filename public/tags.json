@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "live",
+    "icon": "../src/assets/dvl.png"
+  },
+  {
+    "id": 1,
+    "name": "Dragons",
+    "icon": "../src/assets/dragon.png"
+  },
+  {
+    "id": 2,
+    "name": "Robots",
+    "icon": "../src/assets/robot.svg"
+  },
+  {
+    "id": 3,
+    "name": "Food",
+    "icon": "../src/assets/samy.png"
+  },
+  {
+    "id": 4,
+    "name": "Pokemon",
+    "icon": "../src/assets/pika.png"
+  },
+  {
+    "id": 5,
+    "name": "MTG",
+    "icon": "../src/assets/mtg.svg"
+  }
+]
