@@ -39,12 +39,17 @@ h1 {
   font-weight: 200;
 }
 
+a {
+      text-decoration: none;
+}
+
 .main {
   margin: 12rem;
   display: flex;
   align-items: center;
   margin-top: 2rem;
 }
+
 
 .juice {
   margin: 25px;

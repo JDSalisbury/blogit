@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="tag in tags" :key="tag.id">
+    <div id="tag-area" v-for="tag in tags" :key="tag.id">
       <router-link @click.native="scrollToTop" :to="'/tag/' + tag.id">
         <h6>
           <i>{{ tag.name }}</i>
@@ -21,5 +21,12 @@ export default {
 h6 {
   color: gray;
   font-weight: 800;
+  padding 4px
+}
+a {
+      text-decoration: none;
+}
+#tag-area {
+  display inline-block
 }
 </style>
