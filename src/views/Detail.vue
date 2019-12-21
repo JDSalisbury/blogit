@@ -21,7 +21,6 @@ export default {
   methods: mapActions(['fetchBlog']),
   created() {
     this.fetchBlog(this.id);
-    console.log(this.getDetail);
   },
 };
 </script>

@@ -11,9 +11,14 @@
 </template>
 
 <script>
+import { scrollToTop } from '../lib/helperfunctions';
+
 export default {
-  name: 'Tags',
+  name: 'TagList',
   props: ['tags'],
+  methods: {
+    scrollToTop,
+  },
 };
 </script>
 

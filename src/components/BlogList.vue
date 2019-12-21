@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Blog v-for="item in blogState.blogs" :key="item.id" :item="item" />
+    <Blog
+      v-for="item in resultsFilter(blogState.blogs)"
+      :key="item.id"
+      :item="item"
+    />
     <Footer />
   </div>
 </template>
@@ -9,21 +13,27 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  asyncData({ params, store }) {
-    console.log('wedid it?');
-    return {
-      tagName: params.tagid,
-      taggedPosts: store.getters.fetchBlogsByTags(params.tagid),
-    };
-  },
   name: 'BlogList',
+  props: ['tagid'],
   components: {
     Blog: () => import('./Blog'),
   },
-  props: ['tagid'],
   computed: mapGetters(['blogState']),
   methods: {
-    ...mapActions(['fetchBlogs', 'fetchBlogsByTags']),
+    ...mapActions(['fetchBlogs']),
+    resultsFilter(blogs) {
+      if (this.$route.params.id) {
+        return blogs.filter(
+          blog =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            blog.tags.some(tag => tag.id === this.$route.params.id),
+          // eslint-disable-next-line function-paren-newline
+        );
+        // eslint-disable-next-line no-else-return
+      } else {
+        return blogs;
+      }
+    },
   },
   created() {
     this.fetchBlogs();

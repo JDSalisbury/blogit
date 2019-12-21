@@ -8,7 +8,7 @@
           <h1>{{ item.title }}</h1>
         </router-link>
       </div>
-      <Tags :tags="item.tags" />
+      <TagList :tags="item.tags" />
       <p>{{ detail ? item.body : vanish(item.body) }}</p>
 
       <span>Created: {{ item.created_at }}</span>
@@ -16,19 +16,18 @@
   </div>
 </template>
 <script>
-import { vanish } from '../lib/helperfunctions';
+import { vanish, scrollToTop } from '../lib/helperfunctions';
 
 export default {
   name: 'Blog',
   props: ['item', 'detail'],
   components: {
-    Tags: () => import('./Tags'),
+    // eslint-disable-next-line import/no-unresolved
+    TagList: () => import('./TagList'),
   },
   methods: {
     vanish,
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    },
+    scrollToTop,
   },
 };
 </script>

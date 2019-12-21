@@ -1,6 +1,5 @@
 <template>
   <div class="Tags">
-    {{ $route.params.id }}
     <BlogList :tagid="$route.params.id" />
     <Footer />
   </div>

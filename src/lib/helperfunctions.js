@@ -3,3 +3,4 @@
 export const listToString = list => list.join(', ');
 
 export const vanish = textBody => `${textBody.substring(0, 290)}...`;
+export const scrollToTop = () => window.scrollTo(0, 0);
