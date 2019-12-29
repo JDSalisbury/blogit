@@ -1,6 +1,7 @@
 <template>
   <div class="main">
-    <img :src="item.picture" alt="test" />
+    <img v-if="!detail" :src="item.picture" alt="test" />
+
     <div class="juice">
       <h1 v-if="detail">{{ item.title }}</h1>
       <div v-else>
@@ -9,6 +10,7 @@
         </router-link>
       </div>
       <TagList :tags="item.tags" />
+      <img v-if="detail" :src="item.picture" alt="test" />
       <p>{{ detail ? item.body : vanish(item.body) }}</p>
 
       <span>Created: {{ item.created_at }}</span>
@@ -43,7 +45,7 @@ a {
 }
 
 .main {
-  margin: 12rem;
+  margin: 10rem;
   display: flex;
   align-items: center;
   margin-top: 2rem;
@@ -54,5 +56,10 @@ a {
   margin: 25px;
   height: 500px;
   // margin-top 0px
+}
+img {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  float: left;
 }
 </style>
