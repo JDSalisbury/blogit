@@ -1,6 +1,9 @@
 <template>
   <div class="tags">
-    <h1>Test Footer</h1>
+    <h1>Test Footer{{ $mq }}</h1>
+    <mq-layout mq="sm">
+      "SMALL SMALL"
+    </mq-layout>
   </div>
 </template>
 
