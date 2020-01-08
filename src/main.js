@@ -8,8 +8,8 @@ Vue.config.productionTip = false;
 // https://alligator.io/vuejs/vue-media-queries/
 Vue.use(VueMq, {
   breakpoints: { // default breakpoints - customize this
-    sm: 450,
-    md: 1250,
+    sm: 326,
+    md: 950,
     lg: Infinity,
   },
   defaultBreakpoint: 'sm', // customize this for SSR

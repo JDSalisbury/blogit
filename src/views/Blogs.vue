@@ -1,7 +1,6 @@
 <template>
   <div class="Blogs">
-    <BlogList />
-    <Footer />
+      <BlogList />
   </div>
 </template>
 
@@ -10,7 +9,6 @@ export default {
   name: 'Blogs',
   components: {
     BlogList: () => import('@/components/BlogList'),
-    Footer: () => import('@/components/Footer'),
   },
 };
 </script>

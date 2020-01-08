@@ -5,7 +5,6 @@
       :key="item.id"
       :item="item"
     />
-    <Footer />
   </div>
 </template>
 

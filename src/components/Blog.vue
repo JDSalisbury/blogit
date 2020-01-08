@@ -1,6 +1,8 @@
 <template>
+<div>
+  <mq-layout mq='lg'>
   <div class="main">
-    <img v-if="!detail" :src="item.picture" alt="test" />
+    <img class='img-lg-screen' v-if="!detail" :src="item.picture" alt="test" />
 
     <div class="juice">
       <h1 v-if="detail">{{ item.title }}</h1>
@@ -10,12 +12,19 @@
         </router-link>
       </div>
       <TagList :tags="item.tags" />
-      <img v-if="detail" :src="item.picture" alt="test" />
+      <img class='img-lg-screen' v-if="detail" :src="item.picture" alt="test" />
       <p>{{ detail ? item.body : vanish(item.body) }}</p>
 
       <span>Created: {{ item.created_at }}</span>
     </div>
   </div>
+  </mq-layout>
+  <mq-layout mq='md'>
+      <router-link @click.native="scrollToTop" :to="'/' + item.id">
+        <img class='img-sm-screen' v-if="!detail" :src="item.picture" alt="test" />
+      </router-link>
+  </mq-layout>
+</div>
 </template>
 <script>
 import { vanish, scrollToTop } from '../lib/helperfunctions';
@@ -41,7 +50,7 @@ h1 {
 }
 
 a {
-      text-decoration: none;
+  text-decoration: none;
 }
 
 .main {
@@ -53,13 +62,16 @@ a {
 
 
 .juice {
-  margin: 25px;
   height: 500px;
-  // margin-top 0px
 }
-img {
+
+.img-lg-screen {
   margin-right: 2rem;
   margin-bottom: 2rem;
   float: left;
+}
+
+.img-sm-screen {
+  margin: .25rem;
 }
 </style>
