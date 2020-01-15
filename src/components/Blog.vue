@@ -30,18 +30,7 @@
       </div>
     </mq-layout>
     <mq-layout mq="md">
-      <router-link @click.native="scrollToTop" :to="'/' + item.id">
-        <h1>{{ item.title }}</h1>
-        <img
-          class="img-sm-screen"
-          v-if="!detail"
-          :src="item.picture"
-          alt="test"
-        />
-      </router-link>
-      <div class="tag-box">
-        <TagList class="overlay" :tags="item.tags" />
-      </div>
+      <Phone :item="item" :detail="detail" />
     </mq-layout>
   </div>
 </template>
@@ -54,6 +43,7 @@ export default {
   components: {
     // eslint-disable-next-line import/no-unresolved
     TagList: () => import('./TagList'),
+    Phone: () => import('./Phone'),
   },
   methods: {
     vanish,
@@ -88,23 +78,5 @@ a {
   margin-right: 2rem;
   margin-bottom: 2rem;
   float: left;
-}
-
-.img-sm-screen {
-  margin: .25rem;
-}
-
-.overlay {
-  // background rgba(14, 14, 14, 0.81)
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgb(14, 14, 14));
-  width 300px
-  justify-content center
-  margin-top: -85px;
-  margin-bottom: 10px;
-}
-
-.tag-box {
-  display flex
-  justify-content center
 }
 </style>
