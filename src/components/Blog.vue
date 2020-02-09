@@ -4,6 +4,14 @@
       <Desktop :item="item" :detail="detail" />
     </mq-layout>
     <mq-layout mq="md">
+      <div style="float: left">
+        <Phone :item="item" :detail="detail" />
+      </div>
+      <div style="float: right">
+        <Phone :item="item" :detail="detail" />
+      </div>
+    </mq-layout>
+    <mq-layout mq="sm">
       <Phone :item="item" :detail="detail" />
     </mq-layout>
   </div>
