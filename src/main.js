@@ -7,8 +7,9 @@ import store from './store';
 Vue.config.productionTip = false;
 // https://alligator.io/vuejs/vue-media-queries/
 Vue.use(VueMq, {
-  breakpoints: { // default breakpoints - customize this
-    sm: 326,
+  breakpoints: {
+    // default breakpoints - customize this
+    sm: 540,
     md: 950,
     lg: Infinity,
   },

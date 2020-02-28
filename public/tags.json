@@ -2,31 +2,31 @@
   {
     "id": 0,
     "name": "live",
-    "icon": "../src/assets/dvl.png"
+    "icon": "@/assets/dvl.png"
   },
   {
     "id": 1,
     "name": "Dragons",
-    "icon": "../src/assets/dragon.png"
+    "icon": "@/assets/dragon.png"
   },
   {
     "id": 2,
     "name": "Robots",
-    "icon": "../src/assets/robot.svg"
+    "icon": "@/assets/robot.svg"
   },
   {
     "id": 3,
     "name": "Food",
-    "icon": "../src/assets/samy.png"
+    "icon": "@/assets/samy.png"
   },
   {
     "id": 4,
     "name": "Pokemon",
-    "icon": "../src/assets/pika.png"
+    "icon": "@/assets/pika.png"
   },
   {
     "id": 5,
     "name": "MTG",
-    "icon": "../src/assets/mtg.svg"
+    "icon": "@/assets/mtg.svg"
   }
 ]

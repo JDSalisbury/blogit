@@ -5,7 +5,7 @@
         <router-link to="/">Home</router-link> |
         <router-link to="/">Blogs</router-link>
       </div>
-      <img id="logo" alt="Vue logo" src="../src/assets/kiwi.svg" />
+      <Icon />
       <div>
         <a href="https://jdsalisbury.com/" target="_blank">Profile</a> |
         <router-link to="/">Contact</router-link>
@@ -15,6 +15,15 @@
     <router-view />
   </div>
 </template>
+<script>
+export default {
+  name: 'App',
+  props: [],
+  components: {
+    Icon: () => import('./components/Icon'),
+  },
+};
+</script>
 
 <style lang="stylus">
 #app

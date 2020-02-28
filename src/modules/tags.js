@@ -23,7 +23,6 @@ const mutations = {
 const getters = {
   tagState: state => state,
   getTags: state => state.tags,
-  getDetail: state => state.detail,
 };
 
 const state = {
