@@ -16,7 +16,6 @@ const actions = {
     const jsonResponse = require('../../public/blogs.json');
     // eslint-disable-next-line eqeqeq
     const data = jsonResponse.filter(i => i.tags.some(tag => tag.id === id));
-    console.log(data);
     commit('GET_BLOGS_BY_TAG', data);
   },
 };

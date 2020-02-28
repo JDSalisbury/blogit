@@ -9,8 +9,8 @@ Vue.config.productionTip = false;
 Vue.use(VueMq, {
   breakpoints: {
     // default breakpoints - customize this
-    sm: 540,
-    md: 950,
+    sm: 632,
+    md: 939,
     lg: Infinity,
   },
   defaultBreakpoint: 'sm', // customize this for SSR

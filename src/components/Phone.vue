@@ -41,23 +41,23 @@ a {
 }
 
 p {
-    padding 10px
+  padding: 10px;
 }
 
 .img-sm-screen {
-  margin: .25rem;
+  margin: 0.25rem;
 }
 
 .overlay {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgb(14, 14, 14));
-  width 300px
-  justify-content center
+  width: 300px;
+  justify-content: center;
   margin-top: -85px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .tag-box {
-  display flex
-  justify-content center
+  display: flex;
+  justify-content: center;
 }
 </style>
