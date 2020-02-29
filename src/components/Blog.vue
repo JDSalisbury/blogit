@@ -5,10 +5,10 @@
     </mq-layout>
     <mq-layout mq="md">
       <!-- <Tablet :item="item" :detail="detail" /> -->
-      <div style="float: left">
+      <div v-if="item && item.id % 2 != 0" style="float: left">
         <Tablet :item="item" :detail="detail" />
       </div>
-      <div style="float: right">
+      <div v-if="item && item.id % 2 == 0" style="float: right">
         <Tablet :item="item" :detail="detail" />
       </div>
     </mq-layout>

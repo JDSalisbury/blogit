@@ -1,6 +1,5 @@
 <template>
   <div id="party-area">
-    "midle"
     <div>
       <router-link @click.native="scrollToTop" :to="'/' + item.id">
         <h1>{{ item.title }}</h1>
