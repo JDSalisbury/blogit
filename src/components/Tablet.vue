@@ -1,28 +1,15 @@
 <template>
-  <div id="party-area">
-    <div>
-      <router-link @click.native="scrollToTop" :to="'/' + item.id">
-        <h1>{{ item.title }}</h1>
-        <img class="img-sm-screen" :src="item.picture" alt="test" />
-      </router-link>
-      <div class="tag-box">
-        <TagList class="overlay" :tags="item.tags" />
-      </div>
-      <div v-if="detail">
-        <p>{{ detail && item.body }}</p>
-        <span>Created: {{ item.created_at }}</span>
-      </div>
-      <router-link @click.native="scrollToTop" :to="'/' + item.id">
-        <h1>{{ item.title }}</h1>
-        <img class="img-sm-screen" :src="item.picture" alt="test" />
-      </router-link>
-      <div class="tag-box">
-        <TagList class="overlay" :tags="item.tags" />
-      </div>
-      <div v-if="detail">
-        <p>{{ detail && item.body }}</p>
-        <span>Created: {{ item.created_at }}</span>
-      </div>
+  <div>
+    <router-link @click.native="scrollToTop" :to="'/' + item.id">
+      <h1>{{ item.title }}</h1>
+      <img class="img-sm-screen" :src="item.picture" alt="test" />
+    </router-link>
+    <div class="tag-box">
+      <TagList class="overlay" :tags="item.tags" />
+    </div>
+    <div v-if="detail">
+      <p>{{ detail && item.body }}</p>
+      <span>Created: {{ item.created_at }}</span>
     </div>
   </div>
 </template>
@@ -45,10 +32,6 @@ export default {
 
 <style scoped lang="stylus">
 
-#party-area {
-    display grid
-    grid-template-columns 1fr, 1fr
-}
 h1 {
   font-family: 'Verdana, Geneva, Tahoma, sans-serif';
   font-weight: 200;

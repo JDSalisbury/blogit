@@ -1,6 +1,6 @@
 <template>
   <div class="Tags">
-    <BlogList :tagid="$route.params.id" />
+    <Blogs :tagid="$route.params.id" />
     <Footer />
   </div>
 </template>
@@ -9,7 +9,7 @@
 export default {
   name: 'Tags',
   components: {
-    BlogList: () => import('@/components/BlogList'),
+    Blogs: () => import('./Blogs'),
     Footer: () => import('@/components/Footer'),
   },
 };

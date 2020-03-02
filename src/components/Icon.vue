@@ -34,9 +34,6 @@ export default {
   name: 'Icon',
   props: [],
   computed: mapGetters(['tagState']),
-  created() {
-    this.fetchTags();
-  },
   methods: {
     src(tags) {
       // eslint-disable-next-line radix
