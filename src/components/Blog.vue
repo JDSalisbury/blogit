@@ -3,17 +3,8 @@
     <mq-layout mq="lg">
       <Desktop :item="item" :detail="detail" />
     </mq-layout>
-    <mq-layout mq="md" style="display: flex; justify-content: space-between">
-      <div>
-        <div v-if="item && item.id % 2 != 0">
-          <Tablet :item="item" :detail="detail" />
-        </div>
-      </div>
-      <div>
-        <div v-if="item && item.id % 2 == 0">
-          <Tablet :item="item" :detail="detail" />
-        </div>
-      </div>
+    <mq-layout mq="md">
+      <Tablet :item="item" :detail="detail" />
     </mq-layout>
     <mq-layout mq="sm">
       <Phone :item="item" :detail="detail" />
